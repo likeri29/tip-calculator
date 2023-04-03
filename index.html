@@ -18,30 +18,74 @@
 
 <body>
 
-  Bill
+  <main>
+    <img src="./src/images/logo.svg" alt="logo" class="logo">
+    <form action="#">
+      <div class="form-group">
+        <label for="bill">Bill</label>
+        <input type="text" name="bill" id="bill" class="form-input">
+        <img src="./src/images/icon-dollar.svg" alt="dollar" class="input-image">
+      </div>
+      <div class="form-group">
+        <fieldset>
+          <legend>Select Tip %</legend>
+          <ul>
+            <li class="tip-option">
+              <input type="radio" name="tipOption" id="box-1" class="tip-box">
+              <label for="box-1" class="tip-label">5%</label>
+            </li>
+            <li class="tip-option">
+              <input type="radio" name="tipOption" id="box-2" class="tip-box">
+              <label for="box-2" class="tip-label">5%</label>
+            </li>
+            <li class="tip-option">
+              <input type="radio" name="tipOption" id="box-3" class="tip-box">
+              <label for="box-3" class="tip-label">5%</label>
+            </li>
+            <li class="tip-option">
+              <input type="radio" name="tipOption" id="box-4" class="tip-box">
+              <label for="box-4" class="tip-label">5%</label>
+            </li>
+            <li class="tip-option">
+              <input type="radio" name="tipOption" id="box-5" class="tip-box">
+              <label for="box-5" class="tip-label">5%</label>
+            </li>
+            <li class="tip-option">
+              <input type="number" name="tipOption" min="0" step="1" class="tip-custom" placeholder="Custom">
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <div class="form-group">
+        <label for="people-num">Number of People</label>
+        <input type="number" name="peopleNum" min="0" step="1" id="people-num" class="form-input" placeholder="0" />
+        <img src="./src/images/icon-person.svg" alt="person" class="input-image">
+      </div>
+    </form>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-
-  <div class="attribution">
+    <div class="cheque">
+      <div class="cheque-amount">
+        <div class="cheque-text">
+          <h2 class="cheque-title">Tip Amount</h2>
+          <p class="cheque-sub">/ person</p>
+        </div>
+        <p id="amount" class="sum">$0.00</p>
+      </div>
+      <div class="cheque-total">
+        <div class="cheque-text">
+          <h2 class="cheque-title">Tip Amount</h2>
+          <p class="cheque-sub">/ person</p>
+        </div>
+        <p id="total" class="sum">$0.00</p>
+      </div>
+      <button class="cheque-button">Reset</button>
+    </div>
+  </main>
+  
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 
 
   <script src="./app.js"></script>
