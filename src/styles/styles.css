@@ -17,16 +17,14 @@ input::-webkit-inner-spin-button {
 /* general styles */
 body {
     background-color: hsl(185, 41%, 84%);
-    /* font-family: 'Space Mono', monospace; */
-    /* form inputs should be 24px */
     font-size: 24px;
 }
 
 main {
     width: 50rem;
-    height: 20rem;
+    height: 25rem;
     margin: 16rem auto 0 auto;
-    padding: 3.2rem;
+    padding: 2.5rem;
     background-color: hsl(0, 0%, 100%);
     border-radius: 2.6rem;
     box-shadow: 5px 5px 30px 5px rgba(0, 0, 0, 0.1);
@@ -43,6 +41,10 @@ form {
     width: 50%;
 }
 
+.form-group:not(:last-child) {
+    margin-bottom: 4rem;
+}
+
 .form-label {
     display: block;
     font-size: 1rem;
@@ -50,7 +52,7 @@ form {
     margin-bottom: .5rem;
 }
 
-.form-input {
+.tip-custom, .form-input {
     padding: .5rem;
     border: none;
     border-radius: .2rem;
@@ -73,6 +75,7 @@ form {
 .tip-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
 }
 
 .tip-option {
@@ -83,10 +86,48 @@ form {
     position: relative;
 }
 
+.tip-box,
+.tip-label {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
 
+.tip-grid input[type="radio"] {
+    opacity: 0.01;
+    z-index: 100;
+}
+
+.tip-label {
+    padding: 5px;
+    cursor: pointer;
+    z-index: 90;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    height: 2.3rem;
+}
+
+.tip-label:hover {
+    background-color: hsl(173, 61%, 77%);
+    /* cursor: pointer; */
+}
+
+.tip-grid input[type="radio"]:checked+label {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(0, 0%, 0%);
+}
 
 .tip-custom {
-    width: 100%;
+    width: 85%;
+    text-align: center;
+    font-size: 1.3rem;
 }
 
 #people-num {
@@ -99,4 +140,7 @@ form {
 .cheque {
     background-color: hsl(183, 100%, 15%);
     width: 50%;
+    padding: 2rem;
+    border-radius: 2.6rem;
+
 }
