@@ -1,11 +1,25 @@
 /* .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); } */
+/* to delete number arrows in the input  */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
 
+* {
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+}
+
+/* general styles */
 body {
     background-color: hsl(185, 41%, 84%);
-    font-family: 'Space Mono', monospace;
+    /* font-family: 'Space Mono', monospace; */
     /* form inputs should be 24px */
-    font-size: 24px; 
+    font-size: 24px;
 }
 
 main {
@@ -24,9 +38,63 @@ main {
     display: none;
 }
 
+/* form styles */
 form {
     width: 50%;
 }
+
+.form-label {
+    display: block;
+    font-size: 1rem;
+    color: hsl(186, 14%, 43%);
+    margin-bottom: .5rem;
+}
+
+.form-input {
+    padding: .5rem;
+    border: none;
+    border-radius: .2rem;
+    background-color: hsl(180, 37%, 97%);
+    /* background-color: black; */
+    color: hsl(183, 100%, 15%);
+    text-align: right;
+    width: 90%;
+    height: 1.7rem;
+    background-position: 3%;
+}
+
+#bill {
+    background-image: url(../images/icon-dollar.svg);
+    background-repeat: no-repeat;
+
+}
+
+/* selection of tip size */
+.tip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.tip-option {
+    float: left;
+    margin: 0 5px 0 0;
+    width: 100px;
+    height: 40px;
+    position: relative;
+}
+
+
+
+.tip-custom {
+    width: 100%;
+}
+
+#people-num {
+    background-image: url(../images/icon-person.svg);
+    background-repeat: no-repeat;
+}
+
+/* cheque styles */
 
 .cheque {
     background-color: hsl(183, 100%, 15%);
