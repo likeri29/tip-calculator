@@ -62,9 +62,10 @@ function calculateTip(billS, tipPercent, people) {
     reset.addEventListener('click', e => {
         amount.innerHTML = '$0.00';
         total.innerHTML = '$0.00';
-        allInputs.forEach(values => {
-            values.value = '';
-            values.checked = false;
+        allInputs.forEach(input => {
+            input.value = '';
+            input.checked = false;
+            input.classList.remove('success');
         })
     })
 }

@@ -219,8 +219,9 @@ small {
     main {
         margin: 10rem auto 0;
         flex-direction: column;
-        width: 18rem;
+        width: auto;
         height: auto;
+        overflow: hidden;
     }
 
     .form-input {
@@ -235,9 +236,21 @@ small {
         margin-bottom: 3rem;
     }
 
+    small {
+        font-size: .8rem;
+        position: absolute;
+        left: 15rem;
+        color: hsl(15, 69%, 66%);
+        visibility: hidden;
+    }
+
     .tip-grid {
         width: 18rem;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tip-custom, .tip-label {
+        width: 8rem;
     }
 
     .cheque {
