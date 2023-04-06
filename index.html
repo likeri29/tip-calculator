@@ -21,6 +21,7 @@
     <img src="./src/images/logo.svg" alt="logo" class="logo">
     <form action="#">
       <div class="form-group">
+        <small>Can't be zero</small>
         <label for="bill" class="form-label">Bill</label>
         <input type="number" name="bill" id="bill" class="form-input" placeholder="0">
         <!-- <img src="./src/images/icon-dollar.svg" alt="dollar" class="input-image"> -->
@@ -30,34 +31,35 @@
           <legend class="form-label">Select Tip %</legend>
           <ul class="tip-grid">
             <li class="tip-option">
-              <input type="radio" name="tipOption" id="box-1" class="tip-box">
+              <input type="radio" name="tipOption" id="box-1" class="tip-box" value="0.05">
               <label for="box-1" class="tip-label">5%</label>
             </li>
             <li class="tip-option">
-              <input type="radio" name="tipOption" id="box-2" class="tip-box">
-              <label for="box-2" class="tip-label">5%</label>
+              <input type="radio" name="tipOption" id="box-2" class="tip-box" value="0.1">
+              <label for="box-2" class="tip-label">10%</label>
             </li>
             <li class="tip-option">
-              <input type="radio" name="tipOption" id="box-3" class="tip-box">
-              <label for="box-3" class="tip-label">5%</label>
+              <input type="radio" name="tipOption" id="box-3" class="tip-box" value="0.15">
+              <label for="box-3" class="tip-label">15%</label>
             </li>
             <li class="tip-option">
-              <input type="radio" name="tipOption" id="box-4" class="tip-box">
-              <label for="box-4" class="tip-label">5%</label>
+              <input type="radio" name="tipOption" id="box-4" class="tip-box" value="0.25">
+              <label for="box-4" class="tip-label">25%</label>
             </li>
             <li class="tip-option">
-              <input type="radio" name="tipOption" id="box-5" class="tip-box">
-              <label for="box-5" class="tip-label">5%</label>
+              <input type="radio" name="tipOption" id="box-5" class="tip-box" value="0.5">
+              <label for="box-5" class="tip-label">50%</label>
             </li>
             <li class="tip-option">
-              <input type="number" name="tipOption" min="0" step="1" class="tip-custom tip-box" placeholder="Custom">
+              <input type="number" name="tipOptionC" min="0" step="1" class="tip-custom" placeholder="Custom">
             </li>
           </ul>
         </fieldset>
       </div>
       <div class="form-group">
+        <small>Can't be zero</small>
         <label for="people-num" class="form-label">Number of People</label>
-        <input type="number" name="peopleNum" min="0" step="1" id="people-num" class="form-input" placeholder="0" />
+        <input type="number" name="peopleNum" min="0" step="1" id="people-num" class="form-input" placeholder="0">
         <!-- <img src="./src/images/icon-person.svg" alt="person" class="input-image"> -->
       </div>
     </form>
@@ -72,7 +74,7 @@
       </div>
       <div class="cheque-total">
         <div class="cheque-text">
-          <h2 class="cheque-title">Tip Amount</h2>
+          <h2 class="cheque-title">Total</h2>
           <p class="cheque-sub">/ person</p>
         </div>
         <p id="total" class="sum">$0.00</p>

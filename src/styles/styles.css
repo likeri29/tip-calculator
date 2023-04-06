@@ -69,6 +69,10 @@ form {
     background-position: 3%;
 }
 
+.tip-custom:focus, .form-input:focus {
+    outline: 2px solid #26c0ab;
+}
+
 #bill {
     background-image: url(../images/icon-dollar.svg);
     background-repeat: no-repeat;
@@ -100,10 +104,10 @@ form {
     left: 0;
 }
 
-.tip-grid input[type="radio"] {
+/* .tip-grid input[type="radio"] {
     opacity: 0.01;
     z-index: 100;
-}
+} */
 
 .tip-label {
     padding: 5px;
@@ -115,7 +119,8 @@ form {
     background-color: hsl(183, 100%, 15%);
     color: hsl(0, 0%, 100%);
     border-radius: 5px;
-    height: 2.3rem;
+    height: 2.5rem;
+    /* box-sizing: inherit; */
 }
 
 .tip-label:hover {
@@ -132,6 +137,7 @@ form {
     width: 85%;
     text-align: center;
     font-size: 1.3rem;
+    height: 2.2rem;
 }
 
 #people-num {
@@ -193,4 +199,22 @@ form {
 
 .cheque-button:hover {
     background-color: hsl(173, 61%, 77%);
+}
+
+/* validation */
+
+small {
+    font-size: 1rem;
+    position: absolute;
+    left: 48.7rem;
+    color: hsl(15, 69%, 66%);
+    visibility: hidden;
+}
+
+.error {
+    outline: 2px solid hsl(15, 69%, 66%);
+}
+
+.success {
+    outline: 2px solid hsl(172, 32%, 51%);
 }
